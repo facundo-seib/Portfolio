@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Facundo Seib | Portfolio</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container">
+            <h1 class="logo"><a href="/index.html">Facundo Seib</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about-me">Sobre Mí</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="#" class="current">Extra</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <div id="dosbox"></div>
+    <br />
+    <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
+
+
+    <script type="text/javascript" src="https://js-dos.com/cdn/js-dos-api.js"></script>
+
+    <script type="text/javascript">
+        var dosbox = new Dosbox({
+            id: "dosbox",
+            onload: function (dosbox) {
+                dosbox.run("upload/DOOM-@evilution.zip", "./doom");
+            },
+            onrun: function (dosbox, app) {
+                console.log("App '" + app + "' is runned");
+            }
+        });
+    </script>
+</body>
+
+</html>
